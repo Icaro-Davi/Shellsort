@@ -1,0 +1,159 @@
+*{margin:0; padding:0;}
+
+body{
+	overflow-x: hidden;
+}
+
+#id{
+	padding:100px 0;
+	background: #c9dbe9;
+}
+
+.cloud{
+	width: 200px; height:60px;
+	background: #fff;
+	border-radius:200px;
+	position: relative;
+}
+
+.cloud:before, .cloud:after {
+	content:'';
+	position: absolute;
+	background: #fff;
+	width:100px; height: 80px;
+	position: absolute; top:-15px; left:10px;
+
+	border-radius: 100px;
+
+	transition: rotate(30deg);
+}
+
+.cloud:after{
+	width: 120px; height:120px;
+	top:-55px; left: auto; right:15px;
+}
+
+.x1{
+	animation: moveclouds 20s linear infinite
+}
+
+.x2{
+	left:200px;
+
+	transform: scale(0.6);
+	opacity: 0.6;
+
+	animation: moveclouds 20s linear infinite;
+}
+
+.x3{
+	left:-250px; top:-200px;
+
+	transform: scale(0.5);
+	opacity: 0.8;
+
+	animation: moveclouds 20s linear infinite;
+}
+
+.x4{
+	left:470px; top:-250px;
+
+	transform: scale(0.75);
+	opacity: 0.75;
+
+	animation: moveclouds 25s linear infinite;
+}
+
+.x5{
+	left:-150px; top: -150px;
+
+	transform: scale(0.8);
+	opacity: 0.8;
+
+	animation: moveclouds 30s linear infinite;
+}
+
+@keyframes moveclouds{
+	0%{margin-left: 1600px;}
+	100%{margin-left: -1600px;}
+}
+
+.content{
+	background-color: #3b6fb5;
+	margin-top: 20px;
+	width:90%;
+	position: absolute;
+	top:0%;
+	border-style: solid;
+	border-width:5px;
+	border-radius: 10px;
+}
+
+.title{
+	position: relative;
+	padding-bottom:5px;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-color: white;
+	width:180px;
+}
+
+ul{
+	list-style: none;
+	text-align: center;
+}
+
+li{
+	font-size:20px; 
+	margin-bottom: 5px;
+}
+
+.button{
+	text-decoration: none;
+	color:#000000;
+}
+
+.button:hover{
+	font-size: 25px;
+	transition: .5s;
+	border-bottom-style: solid;
+	border-bottom-color:#85aae5;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius:10px;
+	padding-bottom: 5px;
+}
+
+.answerContent{
+	background-color:white;
+	position:absolute;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	width:10%;
+	border-style: solid;
+	border-radius: 20px;
+	border-width: 1px;
+}
+
+.answer{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: black;
+	border-style:solid;
+	border-width: 2px;
+	border-color: black;
+	color:white;
+	border-radius: 20px;
+	position:relative;
+	font-size: 20px;
+	width: 40px;
+}
+
+@media screen and (max-width:1000px){
+	@keyframes moveclouds{
+	0%{margin-left: 1000px;}
+	100%{margin-left: -1000px;}
+}
+}
